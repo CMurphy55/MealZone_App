@@ -1,7 +1,7 @@
 package ie.project.api
 
 import com.google.gson.GsonBuilder
-import ie.project.models.TransferModel
+import ie.project.models.MealModel
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -11,20 +11,20 @@ import java.util.concurrent.TimeUnit
 
 interface MealService {
     @GET("/donations")
-    fun getall(): Call<List<TransferModel>>
+    fun getall(): Call<List<MealModel>>
 
     @GET("/donations/{id}")
-    fun get(@Path("id") id: String): Call<TransferModel>
+    fun get(@Path("id") id: String): Call<MealModel>
 
     @DELETE("/donations/{id}")
     fun delete(@Path("id") id: String): Call<TransferWrapper>
 
     @POST("/donations")
-    fun post(@Body donation: TransferModel): Call<TransferWrapper>
+    fun post(@Body donation: MealModel): Call<TransferWrapper>
 
     @PUT("/donations/{id}")
     fun put(@Path("id") id: String,
-            @Body donation: TransferModel
+            @Body donation: MealModel
     ): Call<TransferWrapper>
 
     companion object {

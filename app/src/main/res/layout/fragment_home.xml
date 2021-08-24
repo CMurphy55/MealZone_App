@@ -8,9 +8,6 @@
     android:background="@color/colorButton"
     tools:context=".fragments.HomeFragment">
 
-
-
-
     <TextView
         android:id="@+id/FitZoneSubtitle"
         android:layout_width="223dp"

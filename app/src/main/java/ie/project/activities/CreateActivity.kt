@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import ie.project.R
 import ie.project.main.TransferApp
-import ie.project.models.TransferModel
+import ie.project.models.MealModel
 import kotlinx.android.synthetic.main.recyclerview_cards.*
 import kotlinx.android.synthetic.main.fragment_donate.chooseImage
 import kotlinx.android.synthetic.main.fragment_donate.enterButton
@@ -17,7 +17,7 @@ import org.jetbrains.anko.toast
 import ie.project.utils.showImagePicker
 
 class CreateActivity :  AppCompatActivity(), AnkoLogger {
-    var meals = TransferModel()
+    var meals = MealModel()
     lateinit var app: TransferApp
     val IMAGE_REQUEST = 1
     val LOCATION_REQUEST = 2
@@ -36,7 +36,7 @@ class CreateActivity :  AppCompatActivity(), AnkoLogger {
 
         if (intent.hasExtra("Dog dec")) {
             edit = true
-            meals = intent.extras?.getParcelable<TransferModel>("cat dec")!!
+            meals = intent.extras?.getParcelable<MealModel>("cat dec")!!
             calories.setText(meals.calories)
             description.setText(meals.description)
 

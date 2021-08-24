@@ -2,10 +2,10 @@ package ie.project.models;
 
 interface TransferStore {
 
-    fun findAll() : List<TransferModel>
-    fun findById(id: String) : TransferModel?
-    fun create(meal: TransferModel)
-    fun update(meal: TransferModel)
-    fun delete(meal: TransferModel)
+    fun findAll() : List<MealModel>
+    fun findById(id: String) : MealModel?
+    fun create(meal: MealModel)
+    fun update(meal: MealModel)
+    fun delete(meal: MealModel)
 
 }

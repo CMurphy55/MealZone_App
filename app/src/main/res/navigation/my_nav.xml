@@ -19,7 +19,7 @@ app:startDestination="@id/HomeFragment">
 </fragment>
 <fragment
     android:id="@+id/reportFragment"
-    android:name="ie.project.fragments.RecyclerViewFragment"
+    android:name="ie.project.fragments.MealListFragment"
     android:label="fragment_report"
     tools:layout="@layout/fragment_recyclerview" />
 

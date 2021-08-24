@@ -1,8 +1,8 @@
 package ie.project.api
 
-import ie.project.models.TransferModel
+import ie.project.models.MealModel
 
 class TransferWrapper {
     var message: String? = null
-    var data: TransferModel? = null
+    var data: MealModel? = null
 }

@@ -13,7 +13,7 @@ import java.util.*
 
 const val JSON_FILE = "Meals.json"
 val gsonBuilder = GsonBuilder().setPrettyPrinting().create()
-val listType : Type = object : TypeToken<java.util.ArrayList<TransferModel>>() {}.type
+val listType : Type = object : TypeToken<java.util.ArrayList<MealModel>>() {}.type
 
 fun generateRandomId(): Long {
     return Random().nextLong()
@@ -21,7 +21,7 @@ fun generateRandomId(): Long {
 
 class MealJSONStore (val context: Context) : TransferStore, AnkoLogger {
 
-    private var meals = mutableListOf<TransferModel>()
+    private var meals = mutableListOf<MealModel>()
 
     init {
         if (exists(context, JSON_FILE)) {
@@ -29,23 +29,23 @@ class MealJSONStore (val context: Context) : TransferStore, AnkoLogger {
         }
     }
 
-    override fun findAll(): MutableList<TransferModel> {
+    override fun findAll(): MutableList<MealModel> {
         return meals
     }
 
-    override fun findById(id: String): TransferModel? {
+    override fun findById(id: String): MealModel? {
         TODO("Not yet implemented")
     }
 
-    override fun create(meal: TransferModel) {
+    override fun create(meal: MealModel) {
 
         meals.add(meal)
         serialize()
     }
 
-    override fun update(meal: TransferModel) {
-        val MealsList = findAll() as ArrayList<TransferModel>
-        var foundMeal: TransferModel? = MealsList.find { p -> p._id == meal._id }
+    override fun update(meal: MealModel) {
+        val MealsList = findAll() as ArrayList<MealModel>
+        var foundMeal: MealModel? = MealsList.find { p -> p._id == meal._id }
         if (foundMeal != null) {
             foundMeal.description = meal.description
             foundMeal.calories = meal.calories
@@ -54,7 +54,7 @@ class MealJSONStore (val context: Context) : TransferStore, AnkoLogger {
         serialize()
     }
 
-    override fun delete(meal: TransferModel) {
+    override fun delete(meal: MealModel) {
         TODO("Not yet implemented")
     }
 
