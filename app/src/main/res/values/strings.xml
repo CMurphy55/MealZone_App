@@ -32,13 +32,11 @@
     <string name="menu_about">About Us</string>
     <string name="menu_thirdoption">Open</string>
 
-    <string name="test11">Test</string>
-    <string name="test14">Test</string>
+
 
 
     <string name="aboutus_title">TransferHub</string>
-    <string name="aboutus_message">TransferHub is a quick and easy way to transfer money. Wherever you are! With a transfer time of under five seconds per transfer, transferHub is the fastest transfer app on the market.
-    our customer service are here to assist you 24/7.</string>
+    <string name="aboutus_message">Insert text here in the about us page</string>
 
     <string name="messageLoading">Please wait while we Connect to the Server...</string>
     <!-- TODO: Remove or change this placeholder text -->

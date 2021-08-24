@@ -3,19 +3,23 @@
 
 
     <item
-        android:id="@+id/home3"
+        android:id="@+id/HomeFragment"
         android:icon="@mipmap/view_foreground"
+        android:background="@color/colorButton2"
         android:title="@string/title_activity_home" />
     <item
         android:id="@+id/reportFragment"
         android:icon="@mipmap/home_foreground"
+        android:background="@color/colorButton2"
         android:title="@string/menu_view" />
     <item
         android:id="@+id/nav_favourites"
         android:icon="@mipmap/nav_foreground"
+        android:background="@color/colorButton2"
         android:title="@string/menu_thirdoption" />
     <item
         android:id="@+id/aboutUsFragment"
         android:icon="@mipmap/page"
+        android:background="@color/colorButton2"
         android:title="@string/menu_about" />
 </menu>
