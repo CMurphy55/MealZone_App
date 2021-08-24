@@ -11,19 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ie.project.R
 import ie.project.adapters.TransferAdapter
-import ie.project.main.TransferApp
+import ie.project.main.MealRepository
 import ie.project.utils.SwipeToDeleteCallback
 import kotlinx.android.synthetic.main.fragment_recyclerview.view.*
 import org.jetbrains.anko.AnkoLogger
 
 class MealListFragment : Fragment(), AnkoLogger{
-
-    lateinit var app: TransferApp
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        app = activity?.application as TransferApp
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +26,7 @@ class MealListFragment : Fragment(), AnkoLogger{
         activity?.title = getString(R.string.action_report)
 
         root.recyclerView.layoutManager = LinearLayoutManager(activity)
-        root.recyclerView.adapter = TransferAdapter(app.donations)
+        root.recyclerView.adapter = TransferAdapter(MealRepository.donations)
 
         val swipeDeleteHandler = object : SwipeToDeleteCallback(activity!!) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {

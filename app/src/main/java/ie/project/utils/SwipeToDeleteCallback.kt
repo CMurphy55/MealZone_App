@@ -1,6 +1,3 @@
-
-// https://github.com/kitek/android-rv-swipe-delete
-
 package ie.project.utils
 
 import android.content.Context

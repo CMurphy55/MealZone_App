@@ -4,34 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorButton"
     tools:context=".fragments.MealListFragment">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swiperefresh"
-        android:layout_width="403dp"
-        android:layout_height="518dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="399dp"
+        android:layout_height="641dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorButton"
+        android:fontFamily="@font/bangers"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="399dp"
-            android:layout_height="641dp"
-            android:layout_marginTop="116dp"
-            android:background="@color/colorButton"
-            android:fontFamily="@font/bangers"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        app:layout_constraintTop_toBottomOf="@+id/reportTitle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/reportTitle"
@@ -41,10 +28,9 @@
         android:text="@string/Meals"
         android:textColor="@color/colorText"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/swiperefresh"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.642" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package ie.project.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,7 @@ class TransferAdapter constructor(var donations: ArrayList<MealModel>)
     class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(meal: MealModel) {
+            Log.wtf("tag", "$meal")
             itemView.tag = meal._id
             itemView.calorieAmount.text = meal.calories
             itemView.description.text = meal.description
