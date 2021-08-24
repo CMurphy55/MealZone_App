@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FitZone</string>
+    <string name="app_name">MealZone</string>
     <string name="action_donate">Transfer</string>
     <string name="action_report">Report</string>
     <string name="Title">FitZone</string>
@@ -30,9 +30,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_view">View</string>
     <string name="menu_about">About Us</string>
-    <string name="menu_thirdoption">Open</string>
-
-
+    <string name="menu_thirdoption">Maps</string>
 
 
     <string name="aboutus_title">TransferHub</string>

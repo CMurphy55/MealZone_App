@@ -3,7 +3,7 @@
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/my_nav"
-app:startDestination="@id/home3">
+app:startDestination="@id/HomeFragment">
 
 <fragment
     android:id="@+id/aboutUsFragment"
@@ -12,7 +12,10 @@ app:startDestination="@id/home3">
     tools:layout="@layout/about_us" >
     <action
         android:id="@+id/action_aboutUsFragment_to_home3"
-        app:destination="@id/home3" />
+        app:destination="@id/HomeFragment" />
+    <action
+        android:id="@+id/action_aboutUsFragment_to_mapFragment"
+        app:destination="@id/mapFragment" />
 </fragment>
 <fragment
     android:id="@+id/reportFragment"
@@ -21,7 +24,7 @@ app:startDestination="@id/home3">
     tools:layout="@layout/fragment_recyclerview" />
 
 <fragment
-    android:id="@+id/home3"
+    android:id="@+id/HomeFragment"
     android:name="ie.project.fragments.HomeFragment"
     android:label="fragment_home"
     tools:layout="@layout/fragment_home" >
@@ -29,4 +32,13 @@ app:startDestination="@id/home3">
         android:id="@+id/action_home3_to_reportFragment"
         app:destination="@id/reportFragment" />
 </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="ie.project.fragments.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
 </navigation>
