@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorText"
-        android:padding="36dp"
+        android:padding="24dp"
         android:shape="rectangle">
 
         <ImageView
@@ -43,8 +43,8 @@
             android:layout_width="89dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/calorieAmount"
             android:fontFamily="@font/staatlitches"
             android:textAlignment="viewStart"
@@ -52,18 +52,5 @@
             android:textSize="16sp"
             tools:text="@string/desc" />
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="89dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_toEndOf="@+id/calorieAmount"
-            android:fontFamily="@font/staatlitches"
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorButton"
-            android:textSize="16sp"
-            tools:text="@string/desc" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

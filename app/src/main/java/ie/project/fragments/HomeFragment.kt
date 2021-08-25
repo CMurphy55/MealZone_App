@@ -1,22 +1,27 @@
 package ie.project.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
 import ie.project.R
 import ie.project.main.MealRepository
 import ie.project.models.MealModel
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.enterButton
+import kotlinx.android.synthetic.main.navbar.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.toast
 import javax.security.auth.callback.Callback
 
 class HomeFragment : Fragment(), AnkoLogger, Callback {
 
+    @SuppressLint("ResourceType")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,6 +39,12 @@ class HomeFragment : Fragment(), AnkoLogger, Callback {
             }
         }
 
+//        btnMaps.setOnClickListener{
+//            val map = MapFragment()
+//            val transaction : FragmentTransaction = fragmentManager!!.beginTransaction()
+//            transaction.replace(R.layout.fragment_home,Map_fragment)
+//            transaction.commit()
+//        }
         return view
     }
 
