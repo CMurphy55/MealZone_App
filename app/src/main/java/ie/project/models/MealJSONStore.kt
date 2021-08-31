@@ -4,9 +4,10 @@ import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import ie.project.utils.exists
-import ie.project.utils.read
-import ie.project.utils.write
+import ie.project.helpers.exists
+import ie.project.helpers.read
+import ie.project.helpers.write
+
 import org.jetbrains.anko.AnkoLogger
 import java.lang.reflect.Type
 import java.util.*
@@ -72,5 +73,3 @@ class MealJSONStore (val context: Context) : TransferStore, AnkoLogger {
         meals = Gson().fromJson(jsonString, listType)
     }
 }
-
-

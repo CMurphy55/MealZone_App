@@ -9,11 +9,9 @@
     tools:context=".fragments.HomeFragment">
 
     <TextView
-        android:id="@+id/FitZoneSubtitle"
-        android:layout_width="223dp"
-        android:layout_height="53dp"
-        android:layout_below="@+id/PageTitle"
-        android:layout_alignEnd="@+id/PageTitle"
+        android:id="@+id/MealZoneSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -23,18 +21,20 @@
         android:text="@string/SubHeading"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/colorText"
-        android:textSize="32sp"
+        android:textSize="42sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.266" />
 
     <Button
         android:id="@+id/chooseImage"
-        android:layout_width="369dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
-        android:layout_margin="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="19dp"
         android:layout_marginBottom="28dp"
         android:background="@color/colorButton2"
@@ -45,42 +45,37 @@
         android:text="@string/button_addImage"
         android:textColor="@color/colorText"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/calories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddDescription" />
 
     <EditText
         android:id="@+id/AddDescription"
-        android:layout_width="367dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
         android:background="@color/colorButton2"
         android:ems="10"
         android:fontFamily="@font/bangers"
         android:hint="@string/description"
         android:inputType="text"
         android:textColor="@color/colorButton"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/enterButton"
-        android:layout_width="381dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:background="@color/colorText"
         android:fontFamily="@font/bangers"
         android:inputType="none"
@@ -88,20 +83,18 @@
         android:text="@string/SubmitButton"
         android:textColor="@color/colorButton"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782" />
+        app:layout_constraintTop_toBottomOf="@+id/calories" />
 
     <EditText
         android:id="@+id/calories"
-        android:layout_width="277dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:autofillHints="Please Enter an Amount"
         android:background="@color/colorButton2"
@@ -110,12 +103,10 @@
         android:hint="@string/enter_amount"
         android:inputType="number"
         android:paddingRight="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/amount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668" />
+        app:layout_constraintTop_toBottomOf="@+id/chooseImage"
+   />
 
     <TextView
         android:id="@+id/amount"
@@ -124,48 +115,26 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/bangers"
         android:text="@string/amount"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         android:textColor="@color/colorText"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/calories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calories"
         app:layout_constraintVertical_bias="0.673" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="349dp"
-        android:layout_height="14dp"
-        android:layout_above="@+id/enterButton"
-        android:layout_alignEnd="@+id/PageTitle"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:indeterminate="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="356dp"
-        android:layout_height="290dp"
+        android:layout_width="370dp"
+        android:layout_height="260dp"
         android:src="@mipmap/logo2_foreground"
         app:layout_constraintBottom_toTopOf="@+id/chooseImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -175,7 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="139dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="53dp"
         android:background="@color/colorText"
@@ -184,8 +153,26 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterButton" />
+        app:layout_constraintTop_toBottomOf="@+id/enterButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/colorButton2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MealZoneSubtitle"
+        app:layout_constraintVertical_bias="0.028" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

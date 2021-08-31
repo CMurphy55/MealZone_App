@@ -4,6 +4,7 @@
 
     <item
         android:id="@+id/HomeFragment"
+        android:fontFamily="@font/bangers"
         android:icon="@mipmap/view_foreground"
         android:background="@color/colorButton2"
         android:title="@string/title_activity_home" />
@@ -11,15 +12,19 @@
         android:id="@+id/reportFragment"
         android:icon="@mipmap/home_foreground"
         android:background="@color/colorButton2"
+        android:fontFamily="@font/bangers"
         android:title="@string/menu_view" />
     <item
         android:id="@+id/mapFragment"
-        android:icon="@mipmap/nav_foreground"
+        android:icon="@mipmap/ic_maps_foreground"
         android:background="@color/colorButton2"
+        android:fontFamily="@font/bangers"
         android:title="@string/menu_thirdoption" />
     <item
         android:id="@+id/aboutUsFragment"
         android:icon="@mipmap/page"
+        android:fontFamily="@font/bangers"
         android:background="@color/colorButton2"
         android:title="@string/menu_about" />
+
 </menu>

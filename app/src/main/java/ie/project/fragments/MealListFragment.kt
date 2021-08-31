@@ -11,37 +11,38 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ie.project.R
 import ie.project.adapters.TransferAdapter
-import ie.project.main.TransferApp
+import ie.project.main.MealRepository
 import ie.project.utils.SwipeToDeleteCallback
 import kotlinx.android.synthetic.main.fragment_recyclerview.view.*
 import org.jetbrains.anko.AnkoLogger
 
 class MealListFragment : Fragment(), AnkoLogger{
 
-    lateinit var app: TransferApp
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        app = activity?.application as TransferApp
-    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+
+
         val root = inflater.inflate(R.layout.fragment_recyclerview, container, false)
         activity?.title = getString(R.string.action_report)
 
         root.recyclerView.layoutManager = LinearLayoutManager(activity)
-        root.recyclerView.adapter = TransferAdapter(app.donations)
+        root.recyclerView.adapter = TransferAdapter(MealRepository.meals)
 
-        val swipeDeleteHandler = object : SwipeToDeleteCallback(activity!!) {
+
+
+        val deletehandler = object : SwipeToDeleteCallback(activity!!) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val adapter = root.recyclerView.adapter as TransferAdapter
                 adapter.removeAt(viewHolder.adapterPosition)
             }
         }
-        val itemTouchDeleteHelper = ItemTouchHelper(swipeDeleteHandler)
+        val itemTouchDeleteHelper = ItemTouchHelper(deletehandler)
         itemTouchDeleteHelper.attachToRecyclerView(root.recyclerView)
 
         return root

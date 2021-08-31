@@ -1,4 +1,4 @@
-package ie.project.models;
+package ie.project.models
 
 interface TransferStore {
 

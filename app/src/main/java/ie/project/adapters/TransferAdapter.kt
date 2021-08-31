@@ -1,5 +1,6 @@
 package ie.project.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import kotlinx.android.synthetic.main.recyclerview_cards.view.*
 import kotlinx.android.synthetic.main.recyclerview_cards.view.calorieAmount
 
 //transferAdapter File
-class TransferAdapter constructor(var donations: ArrayList<MealModel>)
+class TransferAdapter constructor(var meals: ArrayList<MealModel>)
     : RecyclerView.Adapter<TransferAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
@@ -24,20 +25,21 @@ class TransferAdapter constructor(var donations: ArrayList<MealModel>)
     }
 
     override fun onBindViewHolder(holder: MainHolder, position: Int) {
-        val donation = donations[holder.adapterPosition]
+        val donation = meals[holder.adapterPosition]
         holder.bind(donation)
     }
 
-    override fun getItemCount(): Int = donations.size
+    override fun getItemCount(): Int = meals.size
 
     fun removeAt(position: Int) {
-        donations.removeAt(position)
+        meals.removeAt(position)
         notifyItemRemoved(position)
     }
 
     class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(meal: MealModel) {
+            Log.wtf("tag", "$meal")
             itemView.tag = meal._id
             itemView.calorieAmount.text = meal.calories
             itemView.description.text = meal.description

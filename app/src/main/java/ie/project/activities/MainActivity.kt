@@ -7,12 +7,16 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import ie.project.R
+import ie.project.main.TransferApp
+import ie.project.models.MealModel
 import kotlinx.android.synthetic.main.app_bar_home.*
 
 class MainActivity : AppCompatActivity() {
 
 
     lateinit var ft: FragmentTransaction
+    var pet = MealModel()
+    lateinit var app: TransferApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
