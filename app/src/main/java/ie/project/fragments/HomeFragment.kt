@@ -36,12 +36,6 @@ class HomeFragment : Fragment(), AnkoLogger, Callback {
             }
         }
 
-//        btnMaps.setOnClickListener{
-//            val map = MapFragment()
-//            val transaction : FragmentTransaction = fragmentManager!!.beginTransaction()
-//            transaction.replace(R.layout.fragment_home,Map_fragment)
-//            transaction.commit()
-//        }
         return view
     }
 

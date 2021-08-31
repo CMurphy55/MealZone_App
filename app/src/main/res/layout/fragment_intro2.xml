@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="#F57C00">
+    <ImageView
+        android:layout_width="401dp"
+        android:layout_height="276dp"
+
+        android:src="@mipmap/logo2_foreground" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find us on the map"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/staatlitches"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View your current location and see how far away from us you are"
+        android:textColor="@color/colorButton"
+        android:fontFamily="@font/staatlitches"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        />
+</LinearLayout>

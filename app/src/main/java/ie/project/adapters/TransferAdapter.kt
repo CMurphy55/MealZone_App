@@ -43,7 +43,7 @@ class TransferAdapter constructor(var meals: ArrayList<MealModel>)
             itemView.tag = meal._id
             itemView.calorieAmount.text = meal.calories
             itemView.description.text = meal.description
-            itemView.imageIcon.setImageResource(R.mipmap.ic_launcher_round)
+           
         }
     }
 }

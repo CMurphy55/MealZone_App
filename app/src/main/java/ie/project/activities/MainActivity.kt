@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
     lateinit var ft: FragmentTransaction
-    var pet = MealModel()
+    var meal = MealModel()
     lateinit var app: TransferApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
